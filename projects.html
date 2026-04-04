@@ -3,56 +3,138 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Our Projects | Golden Camp Solutions | Kibali, Lumwana, Uganda</title>
-<meta name="description" content="Explore our operations: Kibali Gold Mine (DRC), Lumwana Mining Company (Zambia) and Uganda. Real scale. Real impact. Real mining operations." />
-<meta property="og:title" content="Our Projects | Golden Camp Solutions" />
-<meta property="og:description" content="Operating across Africa's most demanding mining environments — serving 740+ employees across Zambia, DRC and Uganda." />
-<meta property="og:type" content="website" />
+<title>Our Projects | Golden Camp Solutions</title>
+<meta name="description" content="GCS operates at Kibali Gold Mine (DRC), Lumwana Mining Company (Zambia) and Uganda — delivering camp services since 2018." />
 <link rel="stylesheet" href="css/styles.css" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2300AEEF'/><text y='22' x='6' font-size='18' fill='white'>G</text></svg>" />
+<style>
+/* Projects page */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 32px;
+}
+.proj-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--gray-200);
+  display: flex;
+  flex-direction: column;
+}
+.proj-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+.proj-card-header {
+  padding: 32px 28px 24px;
+  background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue-dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.proj-card-header::after {
+  content: '';
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+}
+.proj-flag { font-size: 2.4rem; margin-bottom: 12px; display: block; }
+.proj-country {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 6px;
+}
+.proj-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.proj-since {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
+  font-weight: 500;
+}
+.proj-since span {
+  background: rgba(244,185,66,0.25);
+  color: var(--gold);
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 0.72rem;
+}
+.proj-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--gray-200);
+}
+.proj-stat {
+  background: var(--off-white);
+  padding: 16px 14px;
+  text-align: center;
+}
+.proj-stat .n {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--blue-deep);
+  line-height: 1.1;
+}
+.proj-stat .l {
+  font-size: 0.68rem;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+}
+.proj-body { padding: 24px 28px 28px; flex: 1; display: flex; flex-direction: column; }
+.proj-body p { font-size:0.875rem; color:var(--gray-600); line-height:1.7; margin-bottom:20px; flex:1; }
+.proj-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:auto; }
+.proj-tag {
+  font-size:0.7rem;
+  font-weight:600;
+  padding:4px 11px;
+  background:rgba(0,174,239,0.07);
+  color:var(--blue-dark);
+  border-radius:100px;
+  border:1px solid rgba(0,174,239,0.15);
+}
+@media (max-width: 960px) {
+  .proj-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .proj-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+}
+</style>
 </head>
 <body>
 
 <!-- ═══ NAVBAR ═══ -->
 <nav class="navbar" id="navbar">
   <div class="navbar-inner">
-    <!-- Logo -->
     <a href="index.html" class="navbar-logo">
       <div class="logo-icon">
-        <svg class="logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Cup (red) -->
-          <ellipse cx="14" cy="22" rx="8" ry="3.5" fill="#CC2936"/>
-          <rect x="6" y="14" width="16" height="10" rx="2" fill="#CC2936"/>
-          <ellipse cx="14" cy="14" rx="8" ry="3" fill="#E84855"/>
-          <!-- Saucer line -->
-          <ellipse cx="14" cy="22.5" rx="10" ry="2" fill="#AA1D29"/>
-          <!-- Handle -->
-          <path d="M22 16 Q28 16 28 20 Q28 24 22 24" stroke="#AA1D29" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <!-- Steam -->
-          <path d="M10 11 Q11 8 10 5" stroke="#CC2936" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
-          <path d="M14 11 Q15 8 14 5" stroke="#CC2936" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
-          <path d="M18 11 Q19 8 18 5" stroke="#CC2936" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
-          <!-- Tent (blue) -->
-          <polygon points="28,30 22,18 34,18" fill="#00AEEF"/>
-          <polygon points="28,30 22,18 28,18" fill="#0077B6"/>
-          <rect x="25" y="24" width="6" height="6" rx="1" fill="#005080"/>
-        </svg>
+        <img src="assets/gcs-logo.svg" alt="Golden Camp Solutions" class="logo-img"/>
       </div>
       <span>Golden Camp Solutions</span>
     </a>
-
-    <!-- Desktop Nav -->
     <ul class="navbar-nav">
       <li><a href="index.html" class="nav-link">Home</a></li>
       <li><a href="about.html" class="nav-link">About</a></li>
       <li class="nav-dropdown">
         <a href="services.html" class="nav-link">Services ▾</a>
         <div class="nav-dropdown-menu">
-          <a href="services.html#catering">🍽️ Catering</a>
-          <a href="services.html#housekeeping">🧹 Housekeeping & Laundry</a>
-          <a href="services.html#guest">🏠 Guest Management</a>
-          <a href="services.html#shop">🛒 Shop & Restaurant</a>
-          <a href="services.html#camp">⛺ Camp Management</a>
+          <a href="services.html#catering">Catering</a>
+          <a href="services.html#housekeeping">Housekeeping &amp; Laundry</a>
+          <a href="services.html#guest">Guest Management</a>
+          <a href="services.html#shop">Shop &amp; Restaurant</a>
+          <a href="services.html#camp">Camp Management</a>
         </div>
       </li>
       <li><a href="projects.html" class="nav-link active">Projects</a></li>
@@ -62,8 +144,6 @@
     <div class="navbar-cta">
       <a href="contact.html" class="btn btn-primary btn-sm">Request a Proposal</a>
     </div>
-
-    <!-- Hamburger -->
     <button class="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -82,181 +162,150 @@
 </div>
 
 <!-- ═══ HERO ═══ -->
-<section class="hero-secondary">
+<section class="page-hero">
   <div class="hero-pattern"></div>
   <div class="container">
     <div class="breadcrumb fade-in">
       <a href="index.html">Home</a> / <span>Projects</span>
     </div>
     <h1 class="fade-in">Our Projects</h1>
-    <p class="fade-in">Real operations. Real scale. Real impact. Explore how GCS delivers excellence across Africa's most demanding mining environments.</p>
+    <p class="fade-in" style="color:rgba(255,255,255,0.8);max-width:520px;">Three active operations. Three countries. The same uncompromising standard of service since 2018.</p>
   </div>
 </section>
 
-<!-- ═══ PROJECTS STATS BAR ═══ -->
-<section class="stats-bar" style="background:var(--blue-deep);">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item fade-in">
-        <div class="stat-icon">👷</div>
-        <span class="stat-num text-white"><span data-target="740" data-suffix="+">0+</span></span>
-        <div class="stat-label text-white">Total Staff</div>
-      </div>
-      <div class="stat-item fade-in fade-in-delay-1">
-        <div class="stat-icon">🍽️</div>
-        <span class="stat-num text-white"><span data-target="8446" data-suffix="+">0+</span></span>
-        <div class="stat-label text-white">Daily Meals</div>
-      </div>
-      <div class="stat-item fade-in fade-in-delay-2">
-        <div class="stat-icon">🛏️</div>
-        <span class="stat-num text-white"><span data-target="74768" data-suffix="+">0+</span></span>
-        <div class="stat-label text-white">Monthly Rooms</div>
-      </div>
-      <div class="stat-item fade-in fade-in-delay-3">
-        <div class="stat-icon">🧺</div>
-        <span class="stat-num text-white"><span data-target="26" data-suffix="+">0+</span></span>
-        <div class="stat-label text-white">Tons Laundry/Month</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ PROJECT 1: KIBALI ═══ -->
+<!-- ═══ PROJECT CARDS ═══ -->
 <section class="section">
   <div class="container">
-    <div class="project-card fade-in">
-      <div class="project-header">
-        <div class="project-map-panel">
-          <div class="project-flag">🇨🇩</div>
-          <div class="project-location">
-            <div class="project-country">Democratic Republic of Congo</div>
-            <div class="project-title">Kibali Gold Mine</div>
-            <div class="project-subtitle">Barrick Gold Corporation · Haut-Uélé Province</div>
+
+    <div class="proj-grid">
+
+      <!-- KIBALI -->
+      <div class="proj-card fade-in">
+        <div class="proj-card-header">
+          <span class="proj-flag">🇨🇩</span>
+          <div class="proj-country">Democratic Republic of Congo</div>
+          <div class="proj-name">Kibali Gold Mine</div>
+          <div class="proj-since">Haut-Uélé Province &nbsp;·&nbsp; <span>Since 2018 · Ongoing</span></div>
+        </div>
+        <div class="proj-stats">
+          <div class="proj-stat">
+            <div class="n">54,960</div>
+            <div class="l">Meals / Month</div>
+          </div>
+          <div class="proj-stat">
+            <div class="n">256</div>
+            <div class="l">GCS Staff</div>
+          </div>
+          <div class="proj-stat">
+            <div class="n">28,800</div>
+            <div class="l">Rooms / Month</div>
+          </div>
+          <div class="proj-stat">
+            <div class="n">8T</div>
+            <div class="l">Laundry / Month</div>
           </div>
         </div>
+        <div class="proj-body">
+          <p>One of Africa's largest gold mines — GCS has been the trusted camp services partner at KGM since 2018, serving day and night shift staff with consistent quality and a happy client.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Catering</span>
+            <span class="proj-tag">Housekeeping</span>
+            <span class="proj-tag">Laundry</span>
+            <span class="proj-tag">Shop</span>
+            <span class="proj-tag">Bar &amp; Restaurant</span>
+            <span class="proj-tag">Guest Management</span>
+          </div>
+        </div>
+      </div>
 
-        <div class="project-stats-mini">
-          <div class="project-stat">
-            <div class="project-stat-num"><span data-target="54960" data-suffix="">54,960</span></div>
-            <div class="project-stat-label">Meals/Month</div>
+      <!-- LUMWANA -->
+      <div class="proj-card fade-in fade-in-delay-1">
+        <div class="proj-card-header">
+          <span class="proj-flag">🇿🇲</span>
+          <div class="proj-country">Zambia · Copperbelt Province</div>
+          <div class="proj-name">Lumwana Mining Company</div>
+          <div class="proj-since">100km West of Solwezi &nbsp;·&nbsp; <span>Since 2021 · Ongoing</span></div>
+        </div>
+        <div class="proj-stats">
+          <div class="proj-stat">
+            <div class="n">119,450</div>
+            <div class="l">Meals / Month</div>
           </div>
-          <div class="project-stat">
-            <div class="project-stat-num"><span data-target="256" data-suffix="">256</span></div>
-            <div class="project-stat-label">Staff</div>
+          <div class="proj-stat">
+            <div class="n">372</div>
+            <div class="l">GCS Staff</div>
           </div>
-          <div class="project-stat">
-            <div class="project-stat-num"><span data-target="8" data-suffix="">8</span></div>
-            <div class="project-stat-label">Tons Laundry/Month</div>
+          <div class="proj-stat">
+            <div class="n">45,968</div>
+            <div class="l">Rooms / Month</div>
           </div>
-          <div class="project-stat">
-            <div class="project-stat-num"><span data-target="28800" data-suffix="">28,800</span></div>
-            <div class="project-stat-label">Rooms/Month</div>
+          <div class="proj-stat">
+            <div class="n">18T</div>
+            <div class="l">Laundry / Month</div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <p>GCS's largest operation — serving 3,980 meals per day and cleaning 23,000m² of facilities daily. An exceptional client relationship built since 2021.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Catering</span>
+            <span class="proj-tag">Housekeeping</span>
+            <span class="proj-tag">Laundry</span>
+            <span class="proj-tag">Shop</span>
+            <span class="proj-tag">Bar &amp; Restaurant</span>
+            <span class="proj-tag">Guest Management</span>
+            <span class="proj-tag">Camp Management</span>
           </div>
         </div>
       </div>
 
-      <div class="project-content fade-in fade-in-delay-1">
-        <h3>World-Class Services at One of Africa's Largest Gold Mines</h3>
-        <p>Kibali Gold Mine (KGM) is located in the northeast of the Democratic Republic of Congo — the third biggest investment in the DRC and a major catalyst in transforming the Haut-Uélé province economically. GCS has been the trusted camp services partner at KGM since 2018.</p>
-        <p style="margin-top:16px;">With close to 3,000 employees on site, GCS provides comprehensive catering for all day and night shift staff, alongside housekeeping, laundry, a shop, a licensed bar and restaurant. Our team of 256 dedicated staff ensures seamless delivery of over 54,960 meals per month.</p>
-
-        <div class="project-services">
-          <span class="service-tag">Catering</span>
-          <span class="service-tag">Housekeeping</span>
-          <span class="service-tag">Laundry</span>
-          <span class="service-tag">Shop</span>
-          <span class="service-tag">Bar & Restaurant</span>
-          <span class="service-tag">Guest Management</span>
-          <span class="service-tag">Camp Management</span>
+      <!-- UGANDA -->
+      <div class="proj-card fade-in fade-in-delay-2">
+        <div class="proj-card-header">
+          <span class="proj-flag">🇺🇬</span>
+          <div class="proj-country">Uganda · East Africa</div>
+          <div class="proj-name">Uganda Operations</div>
+          <div class="proj-since">Active Operations &nbsp;·&nbsp; <span>Since 2022 · Ongoing</span></div>
         </div>
-
-        <div class="project-note">
-          <p><strong>Meals Delivery Note:</strong> Meals are delivered to the canteen and directly to the plant site via containership — ensuring hot, compliant meals reach night-shift workers in remote sections of the operation.</p>
+        <div class="proj-stats">
+          <div class="proj-stat">
+            <div class="n">90</div>
+            <div class="l">Meals / Day</div>
+          </div>
+          <div class="proj-stat">
+            <div class="n">8</div>
+            <div class="l">GCS Staff</div>
+          </div>
+          <div class="proj-stat">
+            <div class="n">3</div>
+            <div class="l">Countries Active</div>
+          </div>
+          <div class="proj-stat">
+            <div class="n">2022</div>
+            <div class="l">Year Started</div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <p>Our East Africa presence, established in 2022, completing GCS's footprint across three nations — still going strong with the same commitment to service excellence.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Catering</span>
+            <span class="proj-tag">Housekeeping</span>
+            <span class="proj-tag">Restaurant</span>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ═══ PROJECT 2: LUMWANA ═══ -->
-<section class="section bg-off">
-  <div class="container">
-    <div class="project-card fade-in">
-      <div class="project-header">
-        <div class="project-map-panel">
-          <div class="project-flag">🇿🇲</div>
-          <div class="project-location">
-            <div class="project-country">Zambia · Copperbelt Province</div>
-            <div class="project-title">Lumwana Mining Company</div>
-            <div class="project-subtitle">Barrick Gold Corporation · 100km West of Solwezi</div>
-          </div>
-        </div>
-
-        <div class="project-stats-mini">
-          <div class="project-stat">
-            <div class="project-stat-num"><span data-target="119450" data-suffix="">119,450</span></div>
-            <div class="project-stat-label">Meals/Month</div>
-          </div>
-          <div class="project-stat">
-            <div class="project-stat-num"><span data-target="372" data-suffix="">372</span></div>
-            <div class="project-stat-label">Staff</div>
-          </div>
-          <div class="project-stat">
-            <div class="project-stat-num"><span data-target="18" data-suffix="">18</span></div>
-            <div class="project-stat-label">Tons Laundry/Month</div>
-          </div>
-          <div class="project-stat">
-            <div class="project-stat-num"><span data-target="45968" data-suffix="">45,968</span></div>
-            <div class="project-stat-label">Rooms/Month</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-content fade-in fade-in-delay-1">
-        <h3>GCS's Largest Operation — Powering Zambia's Copper Heartland</h3>
-        <p>Lumwana Mining Company (LMC) is a copper mine located approximately 100km west of Solwezi in Zambia's Copperbelt Province, employing around 5,000 people. GCS has been delivering catering and housekeeping services since 2021, growing this into our largest active operation.</p>
-        <p style="margin-top:16px;">Our Lumwana team of 372 staff serves an average of 3,980 meals per day and services 1,532 beds daily. The GCS team also manages 23,000 square metres of facilities cleaned per day — one of the most intensive cleaning programmes on the continent.</p>
-
-        <div class="project-services">
-          <span class="service-tag">Catering</span>
-          <span class="service-tag">Housekeeping</span>
-          <span class="service-tag">Laundry</span>
-          <span class="service-tag">Shop</span>
-          <span class="service-tag">Bar & Restaurant</span>
-          <span class="service-tag">Guest Management</span>
-          <span class="service-tag">Camp Management</span>
-        </div>
-
-        <div class="project-additional">
-          <p><strong>Additional Services:</strong> In addition to core services, GCS operates a fully stocked shop with 600+ items and a cashless payment system, a licensed bar and restaurant, and full guest management services including computerised and manual occupancy systems.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ PROJECT 3: UGANDA ═══ -->
-<section class="section">
-  <div class="container">
-    <div class="uganda-card fade-in">
-      <div class="uganda-header">
-        <div class="uganda-flag">🇺🇬</div>
-        <h3>Uganda Operations — Active and Growing</h3>
-      </div>
-      <p>GCS operates in Uganda with 8 dedicated staff providing catering, housekeeping and restaurant services. Our Uganda team currently serves 90 meals per day, representing an important part of our growth strategy in East Africa.</p>
-      <p style="margin-top:12px;">Our Uganda presence forms part of our long-term strategy to expand GCS's footprint across East and Central Africa, bringing the same level of operational excellence and community partnership that has defined our success in the DRC and Zambia.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ CTA SECTION ═══ -->
+<!-- ═══ CTA ═══ -->
 <section class="section cta-section">
   <div class="container">
     <div class="cta-inner fade-in">
       <div>
-        <span class="section-label white">Looking for a Reliable Camp Services Partner?</span>
+        <span class="section-label white">Looking for a Reliable Partner?</span>
         <h2>Let's Discuss Your Project</h2>
-        <p>From project inception through demobilisation — we bring operational experience, proven processes and genuine commitment to every partnership. Contact GCS to explore how we can serve your operation.</p>
+        <p>From project inception through long-term operations — we bring proven processes and genuine commitment to every partnership.</p>
       </div>
       <div class="cta-btns">
         <a href="contact.html" class="btn btn-white btn-lg">Request a Proposal</a>
@@ -270,10 +319,9 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <!-- Brand -->
       <div class="footer-brand">
         <div class="footer-logo">
-          <div class="footer-logo-icon">☕</div>
+          <div class="footer-logo-icon" style="background:#003459;border-radius:7px;padding:4px 8px;font-size:0.7rem;font-weight:800;color:#F4B942;letter-spacing:0.05em;border-top:3px solid #F4B942;">GCS</div>
           <span>Golden Camp Solutions</span>
         </div>
         <p>Africa's leading provider of catering, housekeeping and camp management services to the mining sector. Passion for Food. Passion for People. Passion for Quality.</p>
@@ -283,20 +331,16 @@
           <a href="#" class="social-btn" title="WhatsApp">💬</a>
         </div>
       </div>
-
-      <!-- Services -->
       <div class="footer-col">
         <h5>Services</h5>
         <ul>
           <li><a href="services.html#catering">Catering</a></li>
-          <li><a href="services.html#housekeeping">Housekeeping & Laundry</a></li>
+          <li><a href="services.html#housekeeping">Housekeeping &amp; Laundry</a></li>
           <li><a href="services.html#guest">Guest Management</a></li>
-          <li><a href="services.html#shop">Shop & Restaurant</a></li>
+          <li><a href="services.html#shop">Shop &amp; Restaurant</a></li>
           <li><a href="services.html#camp">Camp Management</a></li>
         </ul>
       </div>
-
-      <!-- Company -->
       <div class="footer-col">
         <h5>Company</h5>
         <ul>
@@ -307,18 +351,15 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-
-      <!-- Contact -->
       <div class="footer-col">
         <h5>Contact Us</h5>
         <ul class="footer-contact">
-          <li><span>📧</span><a href="mailto:info@goldencampsolutions.com" style="color:rgba(255,255,255,0.55);">info@goldencampsolutions.com</a></li>
+          <li><span>📧</span><a href="mailto:Gerhard.Bouwer@goldencampsolutions.com" style="color:rgba(255,255,255,0.55);">Gerhard.Bouwer@goldencampsolutions.com</a></li>
           <li><span>🌍</span>Zambia · DRC · Uganda</li>
           <li><span>💬</span><a href="https://wa.me/260000000000" style="color:rgba(255,255,255,0.55);">WhatsApp Us</a></li>
         </ul>
       </div>
     </div>
-
     <div class="footer-bottom">
       <p>© <span class="year">2026</span> Golden Camp Solutions Limited. All rights reserved.</p>
       <div class="footer-bottom-links">
@@ -330,7 +371,6 @@
   </div>
 </footer>
 
-<!-- WhatsApp Float -->
 <a href="https://wa.me/260000000000" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
   💬
   <div class="tooltip">Chat with us on WhatsApp</div>
