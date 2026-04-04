@@ -52,6 +52,7 @@ const statObserver = new IntersectionObserver((entries) => {
     if (entry.isIntersecting && !entry.target.dataset.animated) {
       entry.target.dataset.animated = 'true';
       const target = parseInt(entry.target.dataset.target, 10);
+      if (isNaN(target)) return; // skip non-numeric data-target (e.g. nav links)
       const suffix = entry.target.dataset.suffix || '';
       animateCounter(entry.target, target, suffix);
     }
