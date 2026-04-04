@@ -19,24 +19,7 @@
     <!-- Logo -->
     <a href="index.html" class="navbar-logo">
       <div class="logo-icon">
-        <svg class="logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Cup (red) -->
-          <ellipse cx="14" cy="22" rx="8" ry="3.5" fill="#CC2936"/>
-          <rect x="6" y="14" width="16" height="10" rx="2" fill="#CC2936"/>
-          <ellipse cx="14" cy="14" rx="8" ry="3" fill="#E84855"/>
-          <!-- Saucer line -->
-          <ellipse cx="14" cy="22.5" rx="10" ry="2" fill="#AA1D29"/>
-          <!-- Handle -->
-          <path d="M22 16 Q28 16 28 20 Q28 24 22 24" stroke="#AA1D29" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <!-- Steam -->
-          <path d="M10 11 Q11 8 10 5" stroke="#CC2936" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
-          <path d="M14 11 Q15 8 14 5" stroke="#CC2936" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
-          <path d="M18 11 Q19 8 18 5" stroke="#CC2936" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
-          <!-- Tent (blue) -->
-          <polygon points="28,30 22,18 34,18" fill="#00AEEF"/>
-          <polygon points="28,30 22,18 28,18" fill="#0077B6"/>
-          <rect x="25" y="24" width="6" height="6" rx="1" fill="#005080"/>
-        </svg>
+        <img src="assets/gcs-logo.svg" alt="Golden Camp Solutions" class="logo-img"/>
       </div>
       <span>Golden Camp Solutions</span>
     </a>
@@ -48,11 +31,11 @@
       <li class="nav-dropdown">
         <a href="services.html" class="nav-link">Services ▾</a>
         <div class="nav-dropdown-menu">
-          <a href="services.html#catering">🍽️ Catering</a>
-          <a href="services.html#housekeeping">🧹 Housekeeping & Laundry</a>
-          <a href="services.html#guest">🏠 Guest Management</a>
-          <a href="services.html#shop">🛒 Shop & Restaurant</a>
-          <a href="services.html#camp">⛺ Camp Management</a>
+          <a href="services.html#catering">Catering</a>
+          <a href="services.html#housekeeping">Housekeeping &amp; Laundry</a>
+          <a href="services.html#guest">Guest Management</a>
+          <a href="services.html#shop">Shop &amp; Restaurant</a>
+          <a href="services.html#camp">Camp Management</a>
         </div>
       </li>
       <li><a href="projects.html" class="nav-link">Projects</a></li>
@@ -82,7 +65,7 @@
 </div>
 
 <!-- ═══ HERO ═══ -->
-<section class="hero-secondary">
+<section class="page-hero">
   <div class="hero-pattern"></div>
   <div class="container">
     <div class="breadcrumb fade-in">
@@ -94,85 +77,27 @@
 </section>
 
 <!-- ═══ VISION / MISSION / VALUES ═══ -->
-<section class="section">
-  <div class="container">
-    <div class="vision-mission-grid fade-in">
-      <!-- Vision Card -->
-      <div class="vmv-card vmv-vision">
-        <div class="vmv-icon">🎯</div>
-        <h3>Our Vision</h3>
-        <p>To be Africa's most trusted and respected provider of remote-site services — setting the benchmark for quality, safety and community impact across the mining sector.</p>
-      </div>
-
-      <!-- Mission Card -->
-      <div class="vmv-card vmv-mission">
-        <div class="vmv-icon">💼</div>
-        <h3>Our Mission</h3>
-        <p>To deliver exceptional catering, housekeeping, camp management and facility services that enhance the wellbeing and productivity of every workforce we serve.</p>
-      </div>
-
-      <!-- Values Card -->
-      <div class="vmv-card vmv-values">
-        <div class="vmv-icon">⭐</div>
-        <h3>Our Values</h3>
-        <ul class="values-list">
-          <li><strong>Customer Satisfaction</strong></li>
-          <li><strong>Quality Standards</strong></li>
-          <li><strong>Safety & Hygiene</strong></li>
-          <li><strong>Sustainable Practices</strong></li>
-          <li><strong>Community Partnership</strong></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TIMELINE ═══ -->
 <section class="section bg-off">
   <div class="container">
-    <div class="section-header text-center fade-in">
-      <span class="section-label">Our Journey</span>
-      <h2>Milestones That Shaped Golden Camp Solutions</h2>
-    </div>
-
-    <div class="timeline fade-in">
-      <!-- 2018 -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-year">2018</span>
-          <h4>Foundation</h4>
-          <p>Golden Camp Solutions established with first contract at Kibali Gold Mine, DRC, partnering with Barrick Gold. This marked the beginning of our mission to deliver world-class camp services to Africa's mining sector.</p>
-        </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:960px;margin:0 auto;" class="fade-in">
+      <div style="background:var(--white);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);border-top:4px solid var(--blue);">
+        <div style="font-size:1.5rem;margin-bottom:12px;">🎯</div>
+        <h4 style="color:var(--blue-deep);margin-bottom:8px;">Our Vision</h4>
+        <p style="font-size:0.875rem;margin:0;">Africa's leading remote-site services company — recognised for excellence, workforce wellbeing and community value.</p>
       </div>
-
-      <!-- 2019 -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-year">2019</span>
-          <h4>DRC Growth</h4>
-          <p>Expanded operations at KGM to include housekeeping, laundry, shop, bar and restaurant services. This expansion demonstrated our capability to deliver integrated, full-service camp management solutions.</p>
-        </div>
+      <div style="background:var(--white);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);border-top:4px solid var(--red);">
+        <div style="font-size:1.5rem;margin-bottom:12px;">🚀</div>
+        <h4 style="color:var(--red);margin-bottom:8px;">Our Mission</h4>
+        <p style="font-size:0.875rem;margin:0;">Exceptional catering, housekeeping and camp management that empowers mining workforces and uplifts local communities.</p>
       </div>
-
-      <!-- 2021 -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-year">2021</span>
-          <h4>Zambia Launch</h4>
-          <p>Secured major contract at Lumwana Mining Company — GCS's largest site to date, serving 3,980+ meals per day. This milestone represented significant growth and strategic presence in the Copperbelt Province.</p>
-        </div>
-      </div>
-
-      <!-- 2024 -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-year">2024</span>
-          <h4>Uganda Expansion</h4>
-          <p>Extended operations into Uganda, marking our presence across three African nations. This expansion positions GCS as a truly continental player in remote-site services delivery.</p>
+      <div style="background:var(--white);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);border-top:4px solid var(--gold);">
+        <div style="font-size:1.5rem;margin-bottom:12px;">⭐</div>
+        <h4 style="color:var(--gold-dark);margin-bottom:12px;">Our Values</h4>
+        <div style="font-size:0.85rem;display:flex;flex-direction:column;gap:6px;">
+          <span>✔ Quality &amp; Excellence</span>
+          <span>✔ Safety &amp; Hygiene</span>
+          <span>✔ Integrity</span>
+          <span>✔ Community Partnership</span>
         </div>
       </div>
     </div>
@@ -189,39 +114,39 @@
 
     <div class="why-choose-grid">
       <div class="why-choose-card fade-in">
-        <div class="why-choose-icon">🏆</div>
-        <h4>Scale & Experience</h4>
-        <p>Serving 8,446+ meals daily and managing 3,777+ room services across 3 countries. Our operational scale demonstrates proven capability to deliver at the highest level.</p>
+        <div class="why-choose-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00AEEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h4>Scale &amp; Experience</h4>
+        <p>Serving 8,446+ meals daily and managing 3,777+ room services across 3 countries — proven capability at scale.</p>
       </div>
 
       <div class="why-choose-card fade-in fade-in-delay-1">
-        <div class="why-choose-icon">🌍</div>
+        <div class="why-choose-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00AEEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
         <h4>Culturally Diverse Menus</h4>
-        <p>Ethnic and religious dietary preferences accommodated, with specialist chefs from your workforce's own countries. We celebrate diversity through food.</p>
+        <p>Ethnic and dietary preferences accommodated, with specialist chefs from the workforce's own countries.</p>
       </div>
 
       <div class="why-choose-card fade-in fade-in-delay-2">
-        <div class="why-choose-icon">⚡</div>
+        <div class="why-choose-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00AEEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
         <h4>Technology-Driven</h4>
-        <p>Computerised occupancy tracking, cashless card systems, ticket/scanning meal control and manual backup systems. Innovation at every touchpoint.</p>
+        <p>Computerised occupancy tracking, cashless card systems and ticket/scanning meal control — with manual backup systems.</p>
       </div>
 
       <div class="why-choose-card fade-in fade-in-delay-3">
-        <div class="why-choose-icon">🛡️</div>
+        <div class="why-choose-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00AEEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h4>Strict QHSE</h4>
-        <p>Stringent health, safety, hygiene and quality protocols across all sites — from ISO-compliant laundry to food safety standards. Your wellbeing is non-negotiable.</p>
+        <p>Stringent health, safety, hygiene and quality protocols enforced across all sites — non-negotiable.</p>
       </div>
 
       <div class="why-choose-card fade-in">
-        <div class="why-choose-icon">🤝</div>
+        <div class="why-choose-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00AEEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
         <h4>Community Impact</h4>
-        <p>We partner with local farmers and hire locally, channelling value back into the communities where we operate. Business with a conscience.</p>
+        <p>Local hiring and farm partnerships in every market we operate — genuine economic benefit to the communities we serve.</p>
       </div>
 
       <div class="why-choose-card fade-in fade-in-delay-1">
-        <div class="why-choose-icon">🥇</div>
-        <h4>Proven Partners</h4>
-        <p>Trusted by Barrick Gold Corporation — one of the world's largest gold producers — across multiple African sites. We earn trust through consistent excellence.</p>
+        <div class="why-choose-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00AEEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <h4>Consistent Excellence</h4>
+        <p>A track record built on repeat contracts and long-term client relationships — trust earned through daily delivery.</p>
       </div>
     </div>
   </div>
@@ -281,7 +206,7 @@
       <!-- Brand -->
       <div class="footer-brand">
         <div class="footer-logo">
-          <div class="footer-logo-icon">☕</div>
+          <div class="footer-logo-icon" style="background:#003459;border-radius:7px;padding:4px 8px;font-size:0.7rem;font-weight:800;color:#F4B942;letter-spacing:0.05em;border-top:3px solid #F4B942;">GCS</div>
           <span>Golden Camp Solutions</span>
         </div>
         <p>Africa's leading provider of catering, housekeeping and camp management services to the mining sector. Passion for Food. Passion for People. Passion for Quality.</p>
@@ -320,7 +245,7 @@
       <div class="footer-col">
         <h5>Contact Us</h5>
         <ul class="footer-contact">
-          <li><span>📧</span><a href="mailto:info@goldencampsolutions.com" style="color:rgba(255,255,255,0.55);">info@goldencampsolutions.com</a></li>
+          <li><span>📧</span><a href="mailto:Gerhard.Bouwer@goldencampsolutions.com" style="color:rgba(255,255,255,0.55);">Gerhard.Bouwer@goldencampsolutions.com</a></li>
           <li><span>🌍</span>Zambia · DRC · Uganda</li>
           <li><span>💬</span><a href="https://wa.me/260000000000" style="color:rgba(255,255,255,0.55);">WhatsApp Us</a></li>
         </ul>
