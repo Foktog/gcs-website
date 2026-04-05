@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+    <!-- Circular background -->
+    <circle cx="60" cy="60" r="58" fill="white" stroke="#E8E8E8" stroke-width="2"/>
+
+    <!-- Red Cup (G) - Left side -->
+    <path d="M 25 50 Q 25 45 30 45 L 50 45 Q 52 45 52 47 L 52 75 Q 52 78 50 78 L 30 78 Q 25 78 25 75 Z" fill="#CC2936"/>
+    <!-- Cup handle -->
+    <path d="M 52 55 Q 65 55 65 65 Q 65 75 52 75" stroke="#CC2936" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Cup highlight -->
+    <ellipse cx="38" cy="55" rx="6" ry="8" fill="white" opacity="0.3"/>
+
+    <!-- Yellow C - Top right -->
+    <text x="62" y="58" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#F4B942">C</text>
+
+    <!-- Blue S - Bottom right -->
+    <text x="62" y="82" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#00AEEF">S</text>
+</svg>
